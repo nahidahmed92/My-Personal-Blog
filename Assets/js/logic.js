@@ -1,20 +1,10 @@
-// DEPENDENCIES ======================================
-const formEl = document.querySelector('form');
-const blogForm = document.querySelector('.blog-form');
-const username = document.querySelector('#username');
-const title = document.querySelector('#title');
-const content = document.querySelector('#content-input');
-const submit = document.querySelector('#submit');
+document.getElementById('myForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
 
-// DATA
+  // Get form data
+  const username = document.querySelector('input[name="username"]').value;
+  const password = document.querySelector('input[name="password"]').value;
 
-// FUNCTIONS
-function formValidation(event) {
-  event.preventDefault();
-  if (!username.value || !title.value || !content.value) {
-    alert('All fields are required to post.');
-  }
-}
-
-// USER INTERACTIONS
-submit.addEventListener('click', formValidation);
+  // Redirect to a new page
+  window.location.href = 'newpage.html'; // Replace 'newpage.html' with the desired page URL
+});
