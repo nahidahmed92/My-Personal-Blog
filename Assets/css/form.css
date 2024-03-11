@@ -70,6 +70,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   #submitBtn input {
     background-color: #000;
     color: white;

@@ -1,5 +1,6 @@
 :root {
-  --text-color: #000;
+  --light-border: 10px double #000;
+  --dark-border: 10px double #fff;
 }
 
 * {
@@ -14,7 +15,12 @@ body {
   flex-direction: column;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif;
+  background-color: #fff;
 }
+
+/* body[data-theme='dark'] {
+  --background-color: #000000;
+} */
 
 .circle {
   width: 300px;
@@ -26,7 +32,7 @@ body {
 
 #header {
   padding: 20px 15px;
-  border-bottom: 10px double black;
+  border-bottom: 10px double #000;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -35,21 +41,13 @@ body {
 #light-dark-mode {
   background: none;
   border: none;
-  font-size: 150%;
+  font-size: 200%;
   cursor: pointer;
-}
-
-#light-dark-mode.light {
-  background-color: #2ecc71;
-}
-
-#light-dark-mode.dark {
-  background-color: blue;
 }
 
 #logo {
   padding: 20px 15px;
-  border-bottom: 10px double black;
+  border-bottom: 10px double #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +90,7 @@ body {
 
   #logo {
     padding: 20px 90px 20px 15px;
-    border-right: 10px double black;
+    border-right: 10px double #000;
     border-bottom: none;
     justify-content: space-evenly;
   }
@@ -129,7 +127,7 @@ body {
 
   #logo {
     padding: 20px 105px 20px 15px;
-    border-right: 10px double black;
+    border-right: 10px double #000;
     border-bottom: none;
     justify-content: space-evenly;
   }
@@ -166,7 +164,7 @@ body {
 
   #logo {
     padding: 20px 130px 20px 15px;
-    border-right: 10px double black;
+    border-right: 10px double #000;
     border-bottom: none;
     justify-content: space-evenly;
   }
