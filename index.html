@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahmed's Personal Blog</title>
     <link rel="stylesheet" href="Assets/css/form.css" />
+    <link rel="stylesheet" href="Assets/css/style.css" />
   </head>
   <body>
-    <header></header>
-    <form action="blog.html" method="post">
-      <div class="blog-form">
-        <label for="username">Username</label><br />
-        <input id="username" name="username" type="text" />
-      </div>
-      <div class="blog-form">
-        <label for="title">Title</label><br />
-        <input id="title" name="title" type="text" />
-      </div>
-      <div class="blog-form">
-        <label for="content">Content</label><br />
-        <input id="content-input" name="content" type="text" />
-      </div>
-      <div id="submitBtn">
-        <input id="submit" type="submit" value="Submit" />
-      </div>
-    </form>
+    <header id="header">
+      <button id="light-dark-mode">hello</button>
+    </header>
+    <section id="main-content">
+      <section id="logo">
+        <div class="circle"></div>
+        <h1>Ahmed's</h1>
+        <h1>Personal</h1>
+        <h1>Blog</h1>
+      </section>
+      <section id="blog-form">
+        <h2>What's on your mind?</h2>
+        <form action="blog.html" method="post">
+          <div class="blog-field">
+            <label for="username">Username</label><br />
+            <input id="username" name="username" type="text" />
+          </div>
+          <div class="blog-field">
+            <label for="title">Title</label><br />
+            <input id="title" name="title" type="text" />
+          </div>
+          <div class="blog-field">
+            <label for="content">Content</label><br />
+            <input id="content-input" name="content" type="text" />
+          </div>
+          <div id="submitBtn">
+            <input id="submit" type="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+    </section>
     <footer></footer>
     <script src="./Assets/js/form.js"></script>
     <script src="./Assets/js/logic.js"></script>
