@@ -1,10 +1,14 @@
-document.getElementById('myForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the default form submission
+// DEPENDENCIES ======================================
+const lightDarkMode = document.querySelector('#light-dark-mode');
 
-  // Get form data
-  const username = document.querySelector('input[name="username"]').value;
-  const password = document.querySelector('input[name="password"]').value;
+// FUNCTIONS
+function lightMode() {
+  lightDarkMode.classList.add('light');
+}
+function darkMode() {
+  lightDarkMode.classList.add('dark');
+}
 
-  // Redirect to a new page
-  window.location.href = 'newpage.html'; // Replace 'newpage.html' with the desired page URL
-});
+// USER INTERACTIONS
+lightDarkMode.addEventListener('click', lightMode);
+lightDarkMode.addEventListener('click', darkMode);
