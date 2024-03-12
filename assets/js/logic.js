@@ -16,7 +16,7 @@ function themeMode() {
   } else {
     mode = 'light';
     element.textContent = '☀️';
-    container.setAttribute('class', mode);
+    container.setAttribute('class', 'container');
   }
 }
 
