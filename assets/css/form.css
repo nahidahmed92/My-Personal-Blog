@@ -40,7 +40,7 @@ body {
   padding: 20px 0;
 }
 
-.submitBtn input {
+.submitBtn button {
   background-color: #000;
   color: #fff;
   min-width: 350px;
@@ -56,7 +56,7 @@ body {
   border-radius: 4px;
 }
 
-.dark .submitBtn input {
+.dark .submitBtn button {
   background-color: #fff;
   color: #222;
 }
@@ -86,7 +86,7 @@ body {
     justify-content: center;
   }
 
-  .submitBtn input {
+  .submitBtn button {
     background-color: #000;
     color: white;
     min-width: 550px;
