@@ -1,24 +1,37 @@
 // DEPENDENCIES ======================================
-// const formEl = document.querySelector('form');
-// const blogForm = document.querySelector('.blog-form');
-const username = document.querySelector('#username');
-const title = document.querySelector('#title');
-const content = document.querySelector('#content-input');
-const submit = document.querySelector('#submit');
+const usernameInput = document.querySelector('#username');
+const titleInput = document.querySelector('#title');
+const contentInput = document.querySelector('#content');
+const submitBtn = document.querySelector('#submit');
 
-// DATA
+// DATA ==============================================
+const blogPosts = [];
 
-// FUNCTIONS
-function formValidation(event) {
+// FUNCTIONS =========================================
+
+// const collectBlogPost = function () {};
+
+// USER INTERACTIONS =================================
+submitBtn.addEventListener('click', function (event) {
   event.preventDefault();
-  if (!username.value || !title.value || !content.value) {
-    alert('All fields are required to post.');
-  } else {
-    window.location.href = 'blog.html';
+
+  const blogForms = JSON.parse(localStorage.getItem('blogForm'));
+  if (blogForms === null) {
+    alert('all fields are required');
   }
-}
 
-// USER INTERACTIONS
-submit.addEventListener('click', formValidation);
+  // DATA ============================================
+  const blogForm = {
+    username: usernameInput.value,
+    title: titleInput.value,
+    content: contentInput.value,
+  };
 
-// formEl.addEventListener('submit');
+  blogPosts.push(blogForm);
+  localStorage.setItem('blogForm', JSON.stringify(blogPosts));
+  // localStorage.setItem('blogForm', JSON.stringify(blogForm));
+  // blogPosts.push(blogForm);
+  window.location.href = 'blog.html';
+});
+
+// INITIALIZATION ====================================
