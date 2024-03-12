@@ -1,6 +1,6 @@
 // DEPENDENCIES ======================================
-const formEl = document.querySelector('form');
-const blogForm = document.querySelector('.blog-form');
+// const formEl = document.querySelector('form');
+// const blogForm = document.querySelector('.blog-form');
 const username = document.querySelector('#username');
 const title = document.querySelector('#title');
 const content = document.querySelector('#content-input');

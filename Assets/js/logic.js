@@ -1,14 +1,26 @@
 // DEPENDENCIES ======================================
-const lightDarkMode = document.querySelector('#light-dark-mode');
+const modeBtnEl = document.querySelector('.modeBtn');
+const container = document.querySelector('.container');
 
-// FUNCTIONS
-function lightMode() {
-  lightDarkMode.classList.add('light');
-}
-function darkMode() {
-  lightDarkMode.classList.add('dark');
+// DATA ==============================================
+let mode = 'light';
+
+// FUNCTIONS =========================================
+function themeMode() {
+  const element = event.target;
+
+  if (mode === 'light') {
+    mode = 'dark';
+    element.textContent = '🌑';
+    container.setAttribute('class', mode);
+  } else {
+    mode = 'light';
+    element.textContent = '☀️';
+    container.setAttribute('class', mode);
+  }
 }
 
-// USER INTERACTIONS
-lightDarkMode.addEventListener('click', lightMode);
-lightDarkMode.addEventListener('click', darkMode);
+// USER INTERACTIONS =================================
+modeBtnEl.addEventListener('click', themeMode);
+
+// INITIALIZATION ====================================
