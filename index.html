@@ -4,43 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahmed's Personal Blog</title>
-    <link rel="stylesheet" href="Assets/css/form.css" />
-    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
   </head>
-  <body>
-    <header id="header">
-      <button data-theme="light" id="light-dark-mode">☀️</button>
+  <body class="container">
+    <!-- <div class="container"> -->
+    <header class="header">
+      <button data-theme="light" class="modeBtn">☀️</button>
     </header>
-    <section id="main-content">
-      <section id="logo">
+    <section class="main-content">
+      <section class="logo">
         <div class="circle"></div>
         <h1>Ahmed's</h1>
         <h1>Personal</h1>
         <h1>Blog</h1>
       </section>
-      <section id="blog-form">
+      <section class="blog-form">
         <h2>What's on your mind?</h2>
         <form action="blog.html" method="post">
-          <div class="blog-field">
+          <div class="blog-fields">
             <label for="username">Username</label><br />
             <input id="username" name="username" type="text" />
           </div>
-          <div class="blog-field">
+          <div class="blog-fields">
             <label for="title">Title</label><br />
             <input id="title" name="title" type="text" />
           </div>
-          <div class="blog-field">
+          <div class="blog-fields">
             <label for="content">Content</label><br />
-            <input id="content-input" name="content" type="text" />
+            <textarea id="content-text" name="content" type="text"></textarea>
           </div>
-          <div id="submitBtn">
+          <div class="submitBtn">
             <input id="submit" type="submit" value="Submit" />
           </div>
         </form>
       </section>
     </section>
     <footer></footer>
-    <script src="./Assets/js/form.js"></script>
-    <script src="./Assets/js/logic.js"></script>
+    <!-- </div> -->
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/logic.js"></script>
   </body>
 </html>

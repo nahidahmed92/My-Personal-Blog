@@ -1,8 +1,3 @@
-:root {
-  --light-border: 10px double #000;
-  --dark-border: 10px double #fff;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,19 +13,14 @@ body {
   background-color: #fff;
 }
 
-/* body[data-theme='dark'] {
-  --background-color: #000000;
-} */
-
 .circle {
   width: 300px;
   height: 300px;
-  border-radius: 50%; /* Makes the element a circle */
+  border-radius: 50%;
   background: linear-gradient(#e66465, #9198e5);
-  /* background: linear-gradient(#a21c27, #000000);  */
 }
 
-#header {
+.header {
   padding: 20px 15px;
   border-bottom: 10px double #000;
   display: flex;
@@ -38,14 +28,14 @@ body {
   justify-content: flex-end;
 }
 
-#light-dark-mode {
+.modeBtn {
   background: none;
   border: none;
   font-size: 200%;
   cursor: pointer;
 }
 
-#logo {
+.logo {
   padding: 20px 15px;
   border-bottom: 10px double #000;
   display: flex;
@@ -53,22 +43,49 @@ body {
   align-items: center;
 }
 
-#logo h1 {
+.logo h1 {
   color: white;
   font-size: 35px;
   position: absolute;
 }
 
-#logo h1:nth-child(2) {
+.logo h1:nth-child(2) {
   margin-top: 50px;
 }
 
-#logo h1:nth-child(3) {
+.logo h1:nth-child(3) {
   margin-top: 125px;
 }
 
-#logo h1:nth-child(4) {
+.logo h1:nth-child(4) {
   margin-top: 200px;
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #222;
+}
+
+.dark .circle {
+  background: linear-gradient(#d10000, #000000);
+}
+
+.dark .header {
+  border-bottom: 10px double #fff;
+}
+
+.dark .logo {
+  border-bottom: 10px double #fff;
+}
+
+.dark h1 {
+  color: #222;
+  font-size: 35px;
+  position: absolute;
+}
+
+.dark .blog-form {
+  color: #fff;
 }
 
 /* Tablet Styles  */
@@ -78,32 +95,37 @@ body {
     height: 400px;
   }
 
-  #header {
+  .header {
     flex-wrap: nowrap;
   }
 
-  #main-content {
+  .main-content {
     display: flex;
     justify-content: space-evenly;
-    height: 700px;
+    height: 89vh;
   }
 
-  #logo {
+  .logo {
     padding: 20px 90px 20px 15px;
     border-right: 10px double #000;
     border-bottom: none;
     justify-content: space-evenly;
   }
 
-  #logo h1:nth-child(2) {
+  .dark .logo {
+    border-right: 10px double #fff;
+    border-bottom: none;
+  }
+
+  .logo h1:nth-child(2) {
     margin-top: -150px;
   }
 
-  #logo h1:nth-child(3) {
+  .logo h1:nth-child(3) {
     margin-top: 0px;
   }
 
-  #logo h1:nth-child(4) {
+  .logo h1:nth-child(4) {
     margin-top: 150px;
   }
 }
@@ -115,32 +137,31 @@ body {
     height: 400px;
   }
 
-  #header {
+  .header {
     flex-wrap: nowrap;
   }
 
-  #main-content {
+  .main-content {
     display: flex;
     justify-content: space-evenly;
-    height: 700px;
   }
 
-  #logo {
+  .logo {
     padding: 20px 105px 20px 15px;
     border-right: 10px double #000;
     border-bottom: none;
     justify-content: space-evenly;
   }
 
-  #logo h1:nth-child(2) {
+  .logo h1:nth-child(2) {
     margin-top: -150px;
   }
 
-  #logo h1:nth-child(3) {
+  .logo h1:nth-child(3) {
     margin-top: 0px;
   }
 
-  #logo h1:nth-child(4) {
+  .logo h1:nth-child(4) {
     margin-top: 150px;
   }
 }
@@ -152,32 +173,31 @@ body {
     height: 400px;
   }
 
-  #header {
+  .header {
     flex-wrap: nowrap;
   }
 
-  #main-content {
+  .main-content {
     display: flex;
     justify-content: space-evenly;
-    height: 700px;
   }
 
-  #logo {
+  .logo {
     padding: 20px 130px 20px 15px;
     border-right: 10px double #000;
     border-bottom: none;
     justify-content: space-evenly;
   }
 
-  #logo h1:nth-child(2) {
+  .logo h1:nth-child(2) {
     margin-top: -150px;
   }
 
-  #logo h1:nth-child(3) {
+  .logo h1:nth-child(3) {
     margin-top: 0px;
   }
 
-  #logo h1:nth-child(4) {
+  .logo h1:nth-child(4) {
     margin-top: 150px;
   }
 }

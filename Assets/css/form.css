@@ -1,7 +1,3 @@
-:root {
-  --text-color: #000;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,39 +12,57 @@ body {
     sans-serif;
 }
 
-.blog-field {
+.blog-fields {
   padding: 6px 0;
 }
 
-.blog-field input {
+.blog-fields input {
   width: 350px;
   height: 30px;
 }
 
-#blog-form {
+.blog-fields textarea {
+  width: 350px;
+  min-height: 100px;
+  resize: vertical;
+  padding: 4px 0;
+  font-family: inherit;
+}
+
+.blog-form {
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#blog-form h2 {
+.blog-form h2 {
   padding: 20px 0;
 }
 
-#content-input {
-  min-height: 100px;
-}
-
-#submitBtn input {
+.submitBtn input {
   background-color: #000;
-  color: white;
+  color: #fff;
   min-width: 350px;
   min-height: 30px;
 }
 
+/* Dark Mode */
+.dark .blog-fields input,
+.dark .blog-fields textarea {
+  background-color: #222;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.dark .submitBtn input {
+  background-color: #fff;
+  color: #222;
+}
+
 @media screen and (min-width: 768px) {
-  #blog-form {
+  .blog-form {
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
@@ -58,12 +72,13 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
-  .blog-field input {
+  .blog-fields input,
+  .blog-fields textarea {
     width: 550px;
     height: 30px;
   }
 
-  #blog-form {
+  .blog-form {
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
@@ -71,10 +86,16 @@ body {
     justify-content: center;
   }
 
-  #submitBtn input {
+  .submitBtn input {
     background-color: #000;
     color: white;
     min-width: 550px;
     min-height: 30px;
+  }
+
+  .dark .blog-fields input,
+  .dark .blog-fields input {
+    width: 550px;
+    height: 30px;
   }
 }
