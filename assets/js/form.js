@@ -2,6 +2,7 @@
 const usernameInput = document.querySelector('#username');
 const titleInput = document.querySelector('#title');
 const contentInput = document.querySelector('#content');
+const blogForm = document.querySelector('.blog-form');
 const submitBtn = document.querySelector('#submit');
 
 // DATA ==============================================
@@ -15,24 +16,25 @@ console.log(blogPosts);
 // USER INTERACTIONS =================================
 submitBtn.addEventListener('click', function (event) {
   event.preventDefault();
+  console.log('username input: ', usernameInput.value);
+  if (!usernameInput.value || !titleInput.value || !contentInput.value) {
+    console.log('fields are empty');
+    alert('Please ensure all fields are filled before submitting a post.');
+  } else {
+    // DATA ============================================
+    const newBlogPost = {
+      username: usernameInput.value,
+      title: titleInput.value,
+      content: contentInput.value,
+    };
 
-  // if (usernameInput.value === null) {
-  //   alert('all fields are required');
-  // }
-
-  // DATA ============================================
-  const newBlogPost = {
-    username: usernameInput.value,
-    title: titleInput.value,
-    content: contentInput.value,
-  };
-
-  blogPosts.push(newBlogPost);
-  console.log(newBlogPost);
-  localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-  // localStorage.setItem('blogForm', JSON.stringify(blogForm));
-  // blogPosts.push(blogForm);
-  window.location.href = 'blog.html';
+    blogPosts.push(newBlogPost);
+    console.log(newBlogPost);
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+    // localStorage.setItem('blogForm', JSON.stringify(blogForm));
+    // blogPosts.push(blogForm);
+    window.location.href = 'blog.html';
+  }
 });
 
 // INITIALIZATION ====================================

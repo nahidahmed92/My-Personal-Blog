@@ -64,14 +64,20 @@ section {
   padding: 10px;
 }
 
-.posts-container h2 {
+.post-title {
   border-bottom: 1px solid #000;
   padding-bottom: 10px;
+  font-size: 25px;
 }
 
-.post-title {
-  padding: 15px;
+.post-content {
+  padding: 10px;
   min-height: 75px;
+  font-size: 15px;
+}
+
+.post-user {
+  font-size: 12px;
 }
 
 .footer {
@@ -121,7 +127,7 @@ section {
   border: 2px solid #fff;
 }
 
-.dark .posts-container h2 {
+.dark .posts-title {
   border-bottom: 1px solid #fff;
   color: #fff;
 }
