@@ -1,3 +1,8 @@
+:root {
+  --light-color: #ffffff;
+  --dark-color: #222222;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,24 +15,31 @@ body {
   flex-direction: column;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif;
-  background-color: #fff;
+  background-color: var(--light-color);
 }
 
+/* logo circle */
 .circle {
   width: 300px;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
   border-radius: 50%;
   background: linear-gradient(#e66465, #9198e5);
 }
 
 .header {
   padding: 20px 15px;
-  border-bottom: 10px double #000;
+  border-bottom: 10px double var(--dark-color);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
+/* mode button switches from light to dark theme */
 .modeBtn {
   background: none;
   border: none;
@@ -35,35 +47,23 @@ body {
   cursor: pointer;
 }
 
+/* section of circle and h1 text */
 .logo {
   padding: 20px 15px;
-  border-bottom: 10px double #000;
+  border-bottom: 10px double var(--dark-color);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .logo h1 {
-  color: #fff;
-  font-size: 35px;
-  position: absolute;
-}
-
-.logo h1:nth-child(2) {
-  margin-top: 50px;
-}
-
-.logo h1:nth-child(3) {
-  margin-top: 125px;
-}
-
-.logo h1:nth-child(4) {
-  margin-top: 200px;
+  color: var(--light-color);
+  font-size: 40px;
 }
 
 /* Dark Mode */
 .dark {
-  background-color: #222;
+  background-color: var(--dark-color);
 }
 
 .dark .circle {
@@ -71,21 +71,19 @@ body {
 }
 
 .dark .header {
-  border-bottom: 10px double #fff;
+  border-bottom: 10px double var(--light-color);
 }
 
 .dark .logo {
-  border-bottom: 10px double #fff;
+  border-bottom: 10px double var(--light-color);
 }
 
 .dark h1 {
-  color: #222;
-  font-size: 35px;
-  position: absolute;
+  color: var(--dark-color);
 }
 
 .dark .blog-form {
-  color: #fff;
+  color: var(--light-color);
 }
 
 /* Tablet Styles  */
@@ -107,26 +105,14 @@ body {
 
   .logo {
     padding: 20px 90px 20px 15px;
-    border-right: 10px double #000;
+    border-right: 10px double var(--dark-color);
     border-bottom: none;
     justify-content: space-evenly;
   }
 
   .dark .logo {
-    border-right: 10px double #fff;
+    border-right: 10px double var(--light-color);
     border-bottom: none;
-  }
-
-  .logo h1:nth-child(2) {
-    margin-top: -150px;
-  }
-
-  .logo h1:nth-child(3) {
-    margin-top: 0px;
-  }
-
-  .logo h1:nth-child(4) {
-    margin-top: 150px;
   }
 }
 
@@ -148,21 +134,9 @@ body {
 
   .logo {
     padding: 20px 105px 20px 15px;
-    border-right: 10px double #000;
+    border-right: 10px double var(--dark-color);
     border-bottom: none;
     justify-content: space-evenly;
-  }
-
-  .logo h1:nth-child(2) {
-    margin-top: -150px;
-  }
-
-  .logo h1:nth-child(3) {
-    margin-top: 0px;
-  }
-
-  .logo h1:nth-child(4) {
-    margin-top: 150px;
   }
 }
 
@@ -184,20 +158,8 @@ body {
 
   .logo {
     padding: 20px 130px 20px 15px;
-    border-right: 10px double #000;
+    border-right: 10px double var(--dark-color);
     border-bottom: none;
     justify-content: space-evenly;
-  }
-
-  .logo h1:nth-child(2) {
-    margin-top: -150px;
-  }
-
-  .logo h1:nth-child(3) {
-    margin-top: 0px;
-  }
-
-  .logo h1:nth-child(4) {
-    margin-top: 150px;
   }
 }

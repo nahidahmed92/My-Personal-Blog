@@ -7,17 +7,15 @@ const formInputs = document.querySelector('.form-inputs');
 const submitBtn = document.querySelector('#submit');
 
 // DATA ==============================================
+// retrieve array in JSON form
 let blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-console.log(blogPosts);
 
 // FUNCTIONS =========================================
 
-// const collectBlogPost = function () {};
-
 // USER INTERACTIONS =================================
+// submit button will validate form and
 submitBtn.addEventListener('click', function (event) {
   event.preventDefault();
-  console.log('username input: ', usernameInput.value);
   if (!usernameInput.value || !titleInput.value || !contentInput.value) {
     alert('Please ensure all fields are filled before submitting a post.');
   } else {
@@ -29,11 +27,17 @@ submitBtn.addEventListener('click', function (event) {
     };
 
     blogPosts.push(newBlogPost);
+
+    // console log object
     console.log(newBlogPost);
+
+    // set object in JSON form
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-    // localStorage.setItem('blogForm', JSON.stringify(blogForm));
-    // blogPosts.push(blogForm);
+
+    // reset for inputs
     formInputs.reset();
+
+    // after submit go to blog.html
     window.location.href = 'blog.html';
   }
 });

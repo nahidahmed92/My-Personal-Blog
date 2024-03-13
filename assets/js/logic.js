@@ -3,9 +3,11 @@ const modeBtnEl = document.querySelector('.modeBtn');
 const container = document.querySelector('.container');
 
 // DATA ==============================================
+// preset the mode to light
 let mode = 'light';
 
 // FUNCTIONS =========================================
+// swap mode class to change from light to dark theme
 function themeMode() {
   const element = event.target;
 
@@ -21,6 +23,7 @@ function themeMode() {
 }
 
 // USER INTERACTIONS =================================
+// listen for mode button
 modeBtnEl.addEventListener('click', themeMode);
 
 // INITIALIZATION ====================================

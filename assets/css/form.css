@@ -1,3 +1,8 @@
+:root {
+  --light-color: #ffffff;
+  --dark-color: #222222;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,15 +17,18 @@ body {
     sans-serif;
 }
 
+/* form fields. labels, inputs, and textarea */
 .blog-fields {
   padding: 6px 0;
 }
 
+/* specifically input from form */
 .blog-fields input {
   width: 350px;
   height: 30px;
 }
 
+/* text area from form */
 .blog-fields textarea {
   width: 350px;
   min-height: 100px;
@@ -29,6 +37,7 @@ body {
   font-family: inherit;
 }
 
+/* section where form sits */
 .blog-form {
   padding: 20px 15px;
   display: flex;
@@ -36,13 +45,14 @@ body {
   align-items: center;
 }
 
+/* form header */
 .blog-form h2 {
   padding: 20px 0;
 }
 
 .submitBtn button {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--dark-color);
+  color: var(--light-color);
   min-width: 350px;
   min-height: 30px;
 }
@@ -50,15 +60,15 @@ body {
 /* Dark Mode */
 .dark .blog-fields input,
 .dark .blog-fields textarea {
-  background-color: #222;
-  border: 1px solid #fff;
-  color: #fff;
+  background-color: var(--dark-color);
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
   border-radius: 4px;
 }
 
 .dark .submitBtn button {
-  background-color: #fff;
-  color: #222;
+  background-color: var(--light-color);
+  color: var(--dark-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -87,7 +97,7 @@ body {
   }
 
   .submitBtn button {
-    background-color: #000;
+    background-color: var(--dark-color);
     color: white;
     min-width: 550px;
     min-height: 30px;
