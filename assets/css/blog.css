@@ -123,9 +123,14 @@ section {
 
 /* Dark Mode */
 .dark {
-  background: var(--dark-color);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif;
+  background: var(--dark-color);
+  height: 100vh;
 }
 
 .dark .header {
