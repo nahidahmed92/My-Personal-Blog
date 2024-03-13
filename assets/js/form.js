@@ -5,7 +5,8 @@ const contentInput = document.querySelector('#content');
 const submitBtn = document.querySelector('#submit');
 
 // DATA ==============================================
-const blogPosts = [];
+let blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+console.log(blogPosts);
 
 // FUNCTIONS =========================================
 
@@ -15,20 +16,20 @@ const blogPosts = [];
 submitBtn.addEventListener('click', function (event) {
   event.preventDefault();
 
-  const blogForms = JSON.parse(localStorage.getItem('blogForm'));
-  if (blogForms === null) {
-    alert('all fields are required');
-  }
+  // if (usernameInput.value === null) {
+  //   alert('all fields are required');
+  // }
 
   // DATA ============================================
-  const blogForm = {
+  const newBlogPost = {
     username: usernameInput.value,
     title: titleInput.value,
     content: contentInput.value,
   };
 
-  blogPosts.push(blogForm);
-  localStorage.setItem('blogForm', JSON.stringify(blogPosts));
+  blogPosts.push(newBlogPost);
+  console.log(newBlogPost);
+  localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
   // localStorage.setItem('blogForm', JSON.stringify(blogForm));
   // blogPosts.push(blogForm);
   window.location.href = 'blog.html';
