@@ -24,7 +24,7 @@ body {
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 50%;
@@ -67,7 +67,7 @@ body {
 }
 
 .dark .circle {
-  background: linear-gradient(#d10000, #000000);
+  background: linear-gradient(#00d4ff, #020024);
 }
 
 .dark .header {
@@ -79,7 +79,7 @@ body {
 }
 
 .dark h1 {
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .dark .blog-form {
