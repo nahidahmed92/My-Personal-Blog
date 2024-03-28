@@ -2,7 +2,6 @@
 const usernameInput = document.querySelector('#username');
 const titleInput = document.querySelector('#title');
 const contentInput = document.querySelector('#content');
-const blogForm = document.querySelector('.blog-form');
 const formInputs = document.querySelector('.form-inputs');
 const submitBtn = document.querySelector('#submit');
 

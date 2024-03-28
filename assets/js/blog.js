@@ -4,7 +4,7 @@ const clearEl = document.querySelector('.clearBtn');
 
 // DATA ==============================================
 // retrieve array in JSON form
-const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
+let blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
 
 // FUNCTIONS =========================================
 // this will go back one page in the history
@@ -16,6 +16,7 @@ function goBack() {
 function clear(event) {
   event.preventDefault();
   localStorage.clear();
+  blogPosts = [];
   location.reload();
 }
 
